@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VetriVel Farms – From Earth to Life</title>
+  <meta name="description"
+    content="VetriVel Farms – The Root of Purity. Cultivating sustainability through Pure Coconut Oil and Alevior Conscious Beauty. Ethical sourcing, global export, and community impact." />
+  <meta name="keywords" content="VetriVel Farms, coconut oil, Alevior beauty, organic, sustainable farming, export" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Vanilla-tilt for 3D card tilt -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <!-- Particles.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+
+  <!-- Google Material Symbols -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="styles.css?v=1.1" />
+
+</head>
+
+<body>
+
+  <!-- CUSTOM CURSOR REMOVED -->
+
+  <!-- ═══════════════════ PRELOADER ═══════════════════ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <img src="logo.png" alt="VetriVel Farms Logo"
+          style="width:280px;height:auto;filter:drop-shadow(0 0 16px rgba(16,185,129,0.2));" />
+      </div>
+      <div class="preloader-text">VetriVel <span>Farms</span></div>
+      <div class="preloader-bar">
+        <div class="preloader-fill" id="preloaderFill"></div>
+      </div>
+      <div class="preloader-tagline">From Earth to Life.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ NAVIGATION ═══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <img src="logo.png" alt="VetriVel Farms" class="nav-logo-img" />
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#mission" class="nav-link" data-section="mission">Our Mission</a></li>
+        <li><a href="#coconut" class="nav-link" data-section="coconut">Coconut Oil</a></li>
+        <li><a href="#alevior" class="nav-link" data-section="alevior">Alevior Beauty</a></li>
+        <li><a href="#csr" class="nav-link" data-section="csr">Impact</a></li>
+        <li><a href="#careers" class="nav-link" data-section="careers">Careers</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="nav-cta">Get Started <span class="material-symbols-outlined">arrow_forward</span></a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Progress Bar Removed -->
+  </nav>
+
+  <!-- ═══════════════════ GLOBE EXPRESS HERO ═══════════════════ -->
+  <section class="gx-hero" id="home">
+
+    <!-- Slides (full-screen cross-fading backgrounds) -->
+    <div class="gx-slides" id="gxSlides">
+      <div class="gx-slide active" data-idx="0">
+        <div class="gx-slide-bg" style="background-image:url('hero_farms.png')"></div>
+        <div class="gx-overlay"></div>
+      </div>
+      <div class="gx-slide" data-idx="1">
+        <div class="gx-slide-bg" style="background-image:url('hero_coconut_oil.png')"></div>
+        <div class="gx-overlay"></div>
+      </div>
+      <div class="gx-slide" data-idx="2">
+        <div class="gx-slide-bg" style="background-image:url('hero_alevior.png')"></div>
+        <div class="gx-overlay"></div>
+      </div>
+      <div class="gx-slide" data-idx="3">
+        <div class="gx-slide-bg" style="background-image:url('hero_impact.png')"></div>
+        <div class="gx-overlay"></div>
+      </div>
+    </div>
+
+    <!-- Left content -->
+    <div class="gx-content">
+      <div class="gx-label" id="gxLabel">ESTABLISHED 2024</div>
+      <h1 class="gx-title" id="gxTitle">Vetrivel<br>FARMS</h1>
+      <p class="gx-desc" id="gxDesc">Cultivating sustainability to power Coconut (Pure Oil) and enhance Alevior (Conscious Beauty).</p>
+      <a class="gx-cta" id="gxCta" href="#projects">DISCOVER FARMS</a>
+    </div>
+
+    <!-- Infinite card carousel (right side) -->
+    <div class="gx-carousel-wrap">
+      <div class="gx-carousel" id="gxCarousel">
+        <div class="gx-card" data-slide="1">
+          <div class="gx-card-img" style="background-image:url('hero_coconut_oil.png')"></div>
+          <div class="gx-card-label">
+            <div class="gx-card-title">Pure Coconut Oil</div>
+            <div class="gx-card-sub">Nature's Best</div>
+          </div>
+        </div>
+        <div class="gx-card" data-slide="2">
+          <div class="gx-card-img" style="background-image:url('hero_alevior.png')"></div>
+          <div class="gx-card-label">
+            <div class="gx-card-title">Alevior Beauty</div>
+            <div class="gx-card-sub">Conscious Beauty</div>
+          </div>
+        </div>
+        <div class="gx-card" data-slide="3">
+          <div class="gx-card-img" style="background-image:url('hero_impact.png')"></div>
+          <div class="gx-card-label">
+            <div class="gx-card-title">Impact &amp; Growth</div>
+            <div class="gx-card-sub">Our Story</div>
+          </div>
+        </div>
+        <div class="gx-card" data-slide="0">
+          <div class="gx-card-img" style="background-image:url('hero_farms.png')"></div>
+          <div class="gx-card-label">
+            <div class="gx-card-title">Vetrivel Farms</div>
+            <div class="gx-card-sub">Established 2024</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="gx-nav">
+      <button class="gx-btn prev-slide" aria-label="Previous">
+        <span class="material-symbols-outlined">west</span>
+      </button>
+      <button class="gx-btn next-slide" aria-label="Next">
+        <span class="material-symbols-outlined">east</span>
+      </button>
+    </div>
+
+  </section>
+
+  <!-- ═══════════════════ MARQUEE BAND ═══════════════════ -->
+  <div class="marquee-band">
+    <div class="marquee-track">
+      <a href="#coconut" class="marquee-item">
+        <span class="material-symbols-outlined marquee-icon">spa</span> Pure Coconut Oil
+      </a>
+      <span class="marquee-sep">✦</span>
+      <a href="#alevior" class="marquee-item">
+        <span class="material-symbols-outlined marquee-icon">face_retouching_natural</span> Alevior Beauty
+      </a>
+      <span class="marquee-sep">✦</span>
+      <a href="#coconut" class="marquee-item">
+        <span class="material-symbols-outlined marquee-icon">public</span> Global Export
+      </a>
+      <span class="marquee-sep">✦</span>
+      <a href="#mission" class="marquee-item">
+        <span class="material-symbols-outlined marquee-icon">recycling</span> Regenerative Farming
+      </a>
+      <span class="marquee-sep">✦</span>
+      <a href="#mission" class="marquee-item">
+        <span class="material-symbols-outlined marquee-icon">verified</span> Certified Organic
+      </a>
+      <span class="marquee-sep">✦</span>
+      <a href="#csr" class="marquee-item">
+        <span class="material-symbols-outlined marquee-icon">opacity</span> Water Conservation
+      </a>
+      <span class="marquee-sep">✦</span>
+      <a href="#csr" class="marquee-item">
+        <span class="material-symbols-outlined marquee-icon">handshake</span> Community First
+      </a>
+      <span class="marquee-sep">✦</span>
+
+      <!-- Duplicate for infinite loop -->
+      <a href="#coconut" class="marquee-item">
+        <span class="material-symbols-outlined marquee-icon">spa</span> Pure Coconut Oil
+      </a>
+      <span class="marquee-sep">✦</span>
+      <a href="#alevior" class="marquee-item">
+        <span class="material-symbols-outlined marquee-icon">face_retouching_natural</span> Alevior Beauty
+      </a>
+      <span class="marquee-sep">✦</span>
+      <a href="#coconut" class="marquee-item">
+        <span class="material-symbols-outlined marquee-icon">public</span> Global Export
+      </a>
+      <span class="marquee-sep">✦</span>
+      <a href="#mission" class="marquee-item">
+        <span class="material-symbols-outlined marquee-icon">recycling</span> Regenerative Farming
+      </a>
+      <span class="marquee-sep">✦</span>
+      <a href="#mission" class="marquee-item">
+        <span class="material-symbols-outlined marquee-icon">verified</span> Certified Organic
+      </a>
+      <span class="marquee-sep">✦</span>
+      <a href="#csr" class="marquee-item">
+        <span class="material-symbols-outlined marquee-icon">opacity</span> Water Conservation
+      </a>
+      <span class="marquee-sep">✦</span>
+      <a href="#csr" class="marquee-item">
+        <span class="material-symbols-outlined marquee-icon">handshake</span> Community First
+      </a>
+      <span class="marquee-sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════ MISSION / VISION SECTION ═══════════════════ -->
+  <section class="mission-section" id="mission">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag reveal-up">Our Unified Vision</div>
+        <h2 class="section-title reveal-up">Built on <span class="gradient-text">Three Pillars</span><br />of Purpose
+        </h2>
+        <p class="section-desc reveal-up">At VetriVel Farms, every decision is rooted in our commitment to purity,
+          sustainability, and community empowerment.</p>
+      </div>
+
+      <div class="pillars-3d-scene">
+        <div class="pillars-wrapper" id="pillarsCarousel">
+          <!-- Pillar 01 -->
+          <div class="pillar-3d-card active">
+            <div class="p-card-content">
+              <div class="p-card-icon">
+                <span class="material-symbols-outlined">verified_user</span>
+              </div>
+              <div class="p-card-num">01</div>
+              <h3 class="p-card-title">Ethical Sourcing</h3>
+              <p class="p-card-desc">Guaranteed traceability from sustainable farmlands. Every bottle carries the story
+                of the farm it came from, ensuring full transparency from root to shelf.</p>
+              <div class="p-card-tags">
+                <span>Traceability</span>
+                <span>Certified</span>
+                <span>Transparent</span>
+              </div>
+            </div>
+            <div class="p-card-glow"></div>
+          </div>
+
+          <!-- Pillar 02 -->
+          <div class="pillar-3d-card">
+            <div class="p-card-content">
+              <div class="p-card-icon">
+                <span class="material-symbols-outlined">public</span>
+              </div>
+              <div class="p-card-num">02</div>
+              <h3 class="p-card-title">Dual Market Strength</h3>
+              <p class="p-card-desc">Mastering domestic consumer markets and strategic global export chains. From
+                neighbourhood stores to international cosmetic industries, we deliver excellence everywhere.</p>
+              <div class="p-card-tags">
+                <span>Domestic</span>
+                <span>Export</span>
+                <span>B2B</span>
+              </div>
+            </div>
+            <div class="p-card-glow"></div>
+          </div>
+
+          <!-- Pillar 03 -->
+          <div class="pillar-3d-card">
+            <div class="p-card-content">
+              <div class="p-card-icon">
+                <span class="material-symbols-outlined">eco</span>
+              </div>
+              <div class="p-card-num">03</div>
+              <h3 class="p-card-title">Sustainable Growth</h3>
+              <p class="p-card-desc">Proactive CSR initiatives to invest back into agriculture and community. Every
+                purchase funds farmer training, clean water projects, and educational aid in rural areas.</p>
+              <div class="p-card-tags">
+                <span>CSR</span>
+                <span>Community</span>
+                <span>Green</span>
+              </div>
+            </div>
+            <div class="p-card-glow"></div>
+          </div>
+        </div>
+
+        <!-- Carousel Navigation -->
+        <div class="carousel-nav">
+          <button class="c-nav-btn prev" id="pillarPrev"><span
+              class="material-symbols-outlined">chevron_left</span></button>
+          <div class="c-nav-dots" id="pillarDots"></div>
+          <button class="c-nav-btn next" id="pillarNext"><span
+              class="material-symbols-outlined">chevron_right</span></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating decorative elements -->
+    <div class="mission-deco deco-1"></div>
+    <div class="mission-deco deco-2"></div>
+  </section>
+
+  <!-- ═══════════════════ COCONUT OIL SECTION ═══════════════════ -->
+  <section class="product-section coconut-section" id="coconut">
+    <div class="product-bg-shape"></div>
+
+    <div class="section-container">
+      <div class="product-intro">
+        <div class="section-tag reveal-up">Product Line 01</div>
+        <h2 class="section-title reveal-up">Coconut <span class="gradient-text">Pure Oil</span></h2>
+        <p class="section-desc reveal-up">From sustainable farmlands to your doorstep — VetriVel Coconut Pure Oil sets
+          the benchmark for quality, purity, and ethical production.</p>
+      </div>
+
+      <div class="product-showcase-wrap">
+        <!-- 3D Product Display - Animation Replaced Here -->
+        <div class="product-3d-stage reveal-left">
+          <div class="stage-glow"></div>
+          <div class="product-reveal-container">
+            <div class="product-reveal-glass"></div>
+            <canvas id="reveal-canvas"></canvas>
+          </div>
+          <div class="product-ring ring-1"></div>
+          <div class="product-ring ring-2"></div>
+          <div class="product-dots">
+            <div class="pdot" style="--a:0deg; --d:220px"></div>
+            <div class="pdot" style="--a:45deg; --d:230px"></div>
+            <div class="pdot" style="--a:90deg; --d:215px"></div>
+            <div class="pdot" style="--a:135deg; --d:225px"></div>
+            <div class="pdot" style="--a:180deg; --d:220px"></div>
+            <div class="pdot" style="--a:225deg; --d:230px"></div>
+            <div class="pdot" style="--a:270deg; --d:215px"></div>
+            <div class="pdot" style="--a:315deg; --d:225px"></div>
+          </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="product-features reveal-right">
+          <div class="feature-card">
+            <div class="feature-icon"><span class="material-symbols-outlined">home</span></div>
+            <div class="feature-body">
+              <h4>Domestic Market Focus</h4>
+              <p>High-grade coconut oil for daily household use and industrial buyers. Retail packaging and B2B supply
+                for food & pharma sectors.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><span class="material-symbols-outlined">language</span></div>
+            <div class="feature-body">
+              <h4>Global Export Excellence</h4>
+              <p>Meets international quality benchmarks for bulk supply to cosmetic and oleochemical industries. FOB/CIF
+                pricing with organic certifications.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><span class="material-symbols-outlined">science</span></div>
+            <div class="feature-body">
+              <h4>Cold-Pressed Purity</h4>
+              <p>First-press virgin extraction preserving all natural nutrients, lauric acid content, and pristine
+                aroma. Zero chemical processing.</p>
+            </div>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><span class="material-symbols-outlined">assignment_turned_in</span></div>
+            <div class="feature-body">
+              <h4>Certified &amp; Compliant</h4>
+              <p>Fully certified organic, food-grade, and export-compliant. Meeting FSSAI, ISO, and international
+                phytosanitary requirements.</p>
+            </div>
+          </div>
+
+          <div class="product-cta-row">
+            <a href="#contact" class="btn btn-primary">Enquire Now <span
+                class="material-symbols-outlined">arrow_forward</span></a>
+            <div class="product-badge-row">
+              <div class="mini-badge"><span class="material-symbols-outlined">eco</span> Organic</div>
+              <div class="mini-badge"><span class="material-symbols-outlined">check_circle</span> Certified</div>
+              <div class="mini-badge"><span class="material-symbols-outlined">package_2</span> Export Ready</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ ALEVIOR BEAUTY SECTION ═══════════════════ -->
+  <section class="product-section alevior-section" id="alevior">
+    <div class="alevior-bg-shape"></div>
+
+    <div class="section-container">
+      <div class="product-intro">
+        <div class="section-tag reveal-up" style="--tag-color: #d4af37;">Product Line 02</div>
+        <h2 class="section-title reveal-up">Alevior <span class="gradient-text gold-text">Conscious Beauty</span></h2>
+        <p class="section-desc reveal-up">Premium cosmetic and personal care products leveraging farm-pure ingredients.
+          Beauty that is rooted in nature and backed by science.</p>
+      </div>
+
+      <div class="alevior-products-grid">
+        <!-- Product Card 1 -->
+        <div class="alevior-card reveal-up" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+          data-tilt-max-glare="0.25">
+          <div class="alevior-card-glow"></div>
+          <div class="alevior-card-img-wrap">
+            <div class="alevior-img-bg"></div>
+            <img src="youth_renew_serum.png" alt="Youth-Renew Serum" class="alevior-product-img" />
+          </div>
+          <div class="alevior-card-body">
+            <div class="alevior-product-tag">Bestseller</div>
+            <h3 class="alevior-product-name">Youth-Renew Serum</h3>
+            <p class="alevior-product-desc">Infused with VetriVel Virgin Coconut Extract — a potent blend that deeply
+              nourishes, restores skin elasticity, and visibly reduces fine lines with daily use.</p>
+            <div class="alevior-ingredients">
+              <span class="ingredient-tag">Virgin Coconut Extract</span>
+              <span class="ingredient-tag">Botanical Peptides</span>
+              <span class="ingredient-tag">Hyaluronic Acid</span>
+            </div>
+            <div class="alevior-card-footer">
+              <div class="rating-stars">
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="rating-num">4.9/5</span>
+              </div>
+              <a href="#contact" class="btn-small">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="alevior-card reveal-up" data-tilt data-tilt-max="10" data-tilt-speed="400" data-tilt-glare
+          data-tilt-max-glare="0.25">
+          <div class="alevior-card-glow glow-gold"></div>
+          <div class="alevior-card-img-wrap">
+            <div class="alevior-img-bg img-bg-gold"></div>
+            <img src="hair_mask_product.png" alt="Deep Nourish Hair Mask" class="alevior-product-img" />
+          </div>
+          <div class="alevior-card-body">
+            <div class="alevior-product-tag tag-gold">Premium</div>
+            <h3 class="alevior-product-name">Deep Nourish Hair Mask</h3>
+            <p class="alevior-product-desc">A rich blend of VetriVel Coconut Oil and native botanicals that restores
+              moisture, reduces breakage, and leaves hair intensely soft, glossy, and strengthened from root to tip.</p>
+            <div class="alevior-ingredients">
+              <span class="ingredient-tag">Coconut Oil</span>
+              <span class="ingredient-tag">Native Botanicals</span>
+              <span class="ingredient-tag">Keratin Complex</span>
+            </div>
+            <div class="alevior-card-footer">
+              <div class="rating-stars">
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="rating-num">4.8/5</span>
+              </div>
+              <a href="#contact" class="btn-small">Enquire</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Card 3 – Coming Soon -->
+        <div class="alevior-card alevior-card-coming reveal-up">
+          <div class="alevior-card-glow glow-purple"></div>
+          <div class="coming-soon-inner">
+            <div class="coming-icon"><span class="material-symbols-outlined">auto_awesome</span></div>
+            <div class="coming-label">Coming Soon</div>
+            <h3 class="alevior-product-name">New Launch</h3>
+            <p class="alevior-product-desc">Our next generation of farm-to-face skincare is in the making. Sign up to be
+              the first to know.</p>
+            <a href="#contact" class="btn btn-outline mt-small">Notify Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CSR & IMPACT SECTION ═══════════════════ -->
+  <section class="csr-section" id="csr">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag reveal-up">Impact</div>
+        <h2 class="section-title reveal-up">Growing More Than <span class="gradient-text">Crops</span></h2>
+        <p class="section-desc reveal-up">Our impact extends beyond fields. Every purchase contributes to real change —
+          in lives, livelihoods, and landscapes.</p>
+      </div>
+
+      <div class="csr-grid">
+        <div class="csr-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400">
+          <div class="csr-card-top">
+            <div class="csr-icon-wrap">
+              <span class="material-symbols-outlined">person</span>
+            </div>
+            <div class="csr-stat-badge">500+ Farmers</div>
+          </div>
+          <h3 class="csr-title">Livelihood &amp; Training</h3>
+          <p class="csr-body">Farmer capacity building programs, financial literacy workshops, and market-access
+            training empower farming communities to grow sustainably and economically.</p>
+          <ul class="csr-list">
+            <li>Capacity building workshops</li>
+            <li>Financial literacy programs</li>
+            <li>Market linkage support</li>
+          </ul>
+        </div>
+
+        <div class="csr-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400">
+          <div class="csr-card-top">
+            <div class="csr-icon-wrap">
+              <span class="material-symbols-outlined">eco</span>
+            </div>
+            <div class="csr-stat-badge">30% Less Water</div>
+          </div>
+          <h3 class="csr-title">Regenerative Farming</h3>
+          <p class="csr-body">Active investment in soil health restoration, water conservation through drip irrigation
+            systems, and biodiversity protection across all our partnered farmlands.</p>
+          <ul class="csr-list">
+            <li>Drip irrigation adoption</li>
+            <li>Soil health restoration</li>
+            <li>Biodiversity programs</li>
+          </ul>
+        </div>
+
+        <div class="csr-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400">
+          <div class="csr-card-top">
+            <div class="csr-icon-wrap">
+              <span class="material-symbols-outlined">school</span>
+            </div>
+            <div class="csr-stat-badge">10+ Villages</div>
+          </div>
+          <h3 class="csr-title">Health &amp; Education</h3>
+          <p class="csr-body">Infrastructure support, clean water projects, and educational aid in rural areas
+            surrounding our farms. We believe thriving communities produce thriving crops.</p>
+          <ul class="csr-list">
+            <li>Clean water access</li>
+            <li>Educational aid programs</li>
+            <li>Healthcare infrastructure</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Impact Counter Row -->
+      <div class="impact-counters reveal-up">
+        <div class="impact-item">
+          <div class="impact-num"><span class="material-symbols-outlined">groups</span> <span class="count-up"
+              data-target="500">0</span>+</div>
+          <div class="impact-label">Farmers Supported</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-num"><span class="count-up" data-target="10">0</span>+</div>
+          <div class="impact-label">Villages Impacted</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-num"><span class="count-up" data-target="30">0</span>%</div>
+          <div class="impact-label">Water Reduction</div>
+        </div>
+        <div class="impact-item">
+          <div class="impact-num"><span class="count-up" data-target="50">0</span>+</div>
+          <div class="impact-label">Export Countries</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animated BG Decoration -->
+    <div class="csr-bg-deco"></div>
+  </section>
+
+  <!-- ═══════════════════ AGRIVACANCY / CAREERS SECTION ═══════════════════ -->
+  <section class="careers-section" id="careers">
+    <div class="section-container">
+      <div class="section-header">
+        <div class="section-tag reveal-up" style="--tag-color:#f59e0b;">AgriVacancy · Official Portal</div>
+        <h2 class="section-title reveal-up">Join the <span class="gradient-text amber-text">Green Revolution</span></h2>
+        <p class="section-desc reveal-up">VetriVel Farmings — the agri-innovation arm of VetriVel Group — is hiring
+          passionate agricultural talent for landmark projects across Tamil Nadu.</p>
+      </div>
+
+      <!-- Projects Banner -->
+      <div class="careers-projects-grid">
+        <div class="career-project-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400">
+          <div class="cp-icon"><span class="material-symbols-outlined">spa</span></div>
+          <h4 class="cp-title">Aloe Vera &amp; Coconut Export</h4>
+          <p class="cp-desc">Sustainable cultivation, value-chain optimization, and global market expansion of Aloe Vera
+            and Coconut-based products across Tamil Nadu.</p>
+          <div class="cp-tag">Export Farming</div>
+        </div>
+        <div class="career-project-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400">
+          <div class="cp-icon"><span class="material-symbols-outlined">nature</span></div>
+          <h4 class="cp-title">1 Million Trees in One Day</h4>
+          <p class="cp-desc">A historic CSR mission — every tree geo-tagged and monitored via mobile app by FortuMars
+            AI, with 2 full years of continuous care. One of India's most data-integrated CSR projects.</p>
+          <div class="cp-tag">CSR Mission</div>
+        </div>
+        <div class="career-project-card reveal-up" data-tilt data-tilt-max="6" data-tilt-speed="400">
+          <div class="cp-icon"><span class="material-symbols-outlined">water_drop</span></div>
+          <h4 class="cp-title">PMKSY Implementation</h4>
+          <p class="cp-desc">Statewide smart irrigation and water management. Interns gain real-world exposure to
+            agricultural management and digital transformation in farming.</p>
+          <div class="cp-tag">Govt. Project</div>
+        </div>
+      </div>
+
+      <!-- Job Cards -->
+      <div class="jobs-grid">
+        <div class="job-card reveal-up" data-tilt data-tilt-max="5" data-tilt-speed="100" data-tilt-perspective="1000"
+          data-tilt-glare="false" data-tilt-scale="1">
+          <div class="job-card-header">
+            <div class="job-badge">Open</div>
+            <div class="job-icon"><span class="material-symbols-outlined">engineering</span></div>
+          </div>
+          <h3 class="job-title">Field Officer <span class="job-type">(Intern)</span></h3>
+          <div class="job-dept">Agricultural Projects &amp; CSR Division</div>
+          <div class="job-meta-grid">
+            <div class="job-meta-item"><span class="jm-icon"><span
+                  class="material-symbols-outlined">location_on</span></span><span>Across Tamil Nadu</span></div>
+            <div class="job-meta-item"><span class="jm-icon"><span
+                  class="material-symbols-outlined">schedule</span></span><span>6 Months</span></div>
+            <div class="job-meta-item"><span class="jm-icon"><span
+                  class="material-symbols-outlined">payments</span></span><span>₹2.5–4.0 LPA (Post-Internship)</span>
+            </div>
+            <div class="job-meta-item"><span class="jm-icon"><span
+                  class="material-symbols-outlined">trending_up</span></span><span>Performance Stipend</span></div>
+          </div>
+          <ul class="job-duties">
+            <li>Conduct on-field visits and interact with farmers</li>
+            <li>Coordinate Aloe Vera &amp; Coconut cluster development</li>
+            <li>Support "1 Million Trees" project operations</li>
+            <li>Participate in PMKSY activities and CSR outreach</li>
+            <li>Handle data collection and digital reporting</li>
+          </ul>
+          <a href="https://agrivacancy.vetrivelgroups.com" target="_blank" rel="noopener"
+            class="btn btn-primary job-apply-btn">
+            <span>View & Apply</span><span class="material-symbols-outlined">arrow_forward</span>
+            <div class="btn-glow"></div>
+          </a>
+        </div>
+
+        <div class="job-card reveal-up" data-tilt data-tilt-max="5" data-tilt-speed="100" data-tilt-perspective="1000"
+          data-tilt-glare="false" data-tilt-scale="1">
+          <div class="job-card-header">
+            <div class="job-badge">Open</div>
+            <div class="job-icon"><span class="material-symbols-outlined">query_stats</span></div>
+          </div>
+          <h3 class="job-title">Agri Business Executive <span class="job-type">(Intern)</span></h3>
+          <div class="job-dept">Agri Business &amp; Export Division</div>
+          <div class="job-meta-grid">
+            <div class="job-meta-item"><span class="jm-icon"><span
+                  class="material-symbols-outlined">location_on</span></span><span>Across Tamil Nadu</span></div>
+            <div class="job-meta-item"><span class="jm-icon"><span
+                  class="material-symbols-outlined">schedule</span></span><span>6 Months</span></div>
+            <div class="job-meta-item"><span class="jm-icon"><span
+                  class="material-symbols-outlined">payments</span></span><span>₹2.5–4.0 LPA (Post-Internship)</span>
+            </div>
+            <div class="job-meta-item"><span class="jm-icon"><span
+                  class="material-symbols-outlined">trending_up</span></span><span>Performance Stipend</span></div>
+          </div>
+          <ul class="job-duties">
+            <li>Develop business models for export and agri sales</li>
+            <li>Engage with farmers &amp; entrepreneurs via field visits</li>
+            <li>Plan revenue strategies for farm-to-market integration</li>
+            <li>Support CSR and PMKSY projects</li>
+            <li>Conduct market research and prepare business reports</li>
+          </ul>
+          <a href="https://agrivacancy.vetrivelgroups.com" target="_blank" rel="noopener"
+            class="btn btn-primary job-apply-btn">
+            <span>View & Apply</span><span class="material-symbols-outlined">arrow_forward</span>
+            <div class="btn-glow"></div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Candidate Profile + Apply CTA -->
+      <div class="careers-bottom reveal-up">
+        <div class="eligibility-box">
+          <h4 class="elig-title"><span class="material-symbols-outlined">school</span> Candidate Profile (Both Roles)
+          </h4>
+          <ul class="elig-list">
+            <li>B.Sc. / M.Sc. in Agriculture, Agronomy, Horticulture, or Agri Business</li>
+            <li>Excellent communication in Tamil &amp; English</li>
+            <li>Willingness to travel across Tamil Nadu</li>
+            <li>Passion for sustainability, innovation &amp; rural development</li>
+            <li>Familiarity with digital tools or agricultural apps preferred</li>
+          </ul>
+        </div>
+        <div class="careers-apply-cta">
+          <div class="apply-cta-icon"><span class="material-symbols-outlined">rocket_launch</span></div>
+          <h4>Ready to Make an Impact?</h4>
+          <p>Submit your application on our official recruitment portal</p>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScDhxyoQYU_6X5UI8YBVFf2lwKXdRN4RP8sqmR0uRwdSVaarg/viewform"
+            target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:16px;">
+            <span>Apply Now</span><span class="material-symbols-outlined">rocket_launch</span>
+            <div class="btn-glow"></div>
+          </a>
+          <a href="https://agrivacancy.vetrivelgroups.com/job%20description/AGRICULTURE%20VACANCY_JOB%20DESCRIPTION.pdf"
+            target="_blank" rel="noopener" class="btn btn-outline" style="margin-top:10px;">
+            <span><span class="material-symbols-outlined">download</span> Download JD (PDF)</span>
+          </a>
+          <div class="careers-note">All updates published at <a href="https://agrivacancy.vetrivelgroups.com"
+              target="_blank" rel="noopener" style="color:var(--green-light)">agrivacancy.vetrivelgroups.com</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="careers-bg-deco"></div>
+  </section>
+
+  <!-- ═══════════════════ LIQUID GLASS CONTACT SECTION ═══════════════════ -->
+  <section class="liquid-glass-section" id="contact">
+    <!-- Animated Liquid Background -->
+    <div class="liquid-container">
+      <div class="liquid-blob blob-1"></div>
+      <div class="liquid-blob blob-2"></div>
+      <div class="liquid-blob blob-3"></div>
+    </div>
+
+    <div class="section-container">
+      <div class="glass-contact-wrapper reveal-up" data-tilt data-tilt-max="15" data-tilt-speed="400"
+        data-tilt-perspective="1000" data-tilt-glare="false" data-tilt-scale="1">
+        <div class="glass-contact-grid">
+          <!-- Contact Info Side -->
+          <div class="contact-vitals">
+            <div class="section-tag glass-tag">Contact Us</div>
+            <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+            <p class="section-desc">Whether you're a retailer, exporter, beauty brand, or sustainability partner — we're
+              ready to grow together.</p>
+
+            <div class="vitals-stack">
+              <div class="vital-item">
+                <div class="vital-icon"><span class="material-symbols-outlined">mail</span></div>
+                <div class="vital-content">
+                  <span class="vital-label">Email Us</span>
+                  <a href="mailto:info@vetrivelgroups.com" class="vital-link">info@vetrivelgroups.com</a>
+                </div>
+              </div>
+              <div class="vital-item">
+                <div class="vital-icon"><span class="material-symbols-outlined">branding_watermark</span></div>
+                <div class="vital-content">
+                  <span class="vital-label">Brands</span>
+                  <span class="vital-value">Coconut Pure Oil · Alevior Beauty</span>
+                </div>
+              </div>
+              <div class="vital-item">
+                <div class="vital-icon"><span class="material-symbols-outlined">link</span></div>
+                <div class="vital-content">
+                  <span class="vital-label">Website</span>
+                  <a href="https://farms.vetrivelgroups.com" target="_blank"
+                    class="vital-link">farms.vetrivelgroups.com</a>
+                </div>
+              </div>
+              <div class="vital-item">
+                <div class="vital-icon"><span class="material-symbols-outlined">share</span></div>
+                <div class="vital-content">
+                  <span class="vital-label">Follow Us</span>
+                  <div class="vital-socials">
+                    <a href="#" class="social-token">Instagram</a>
+                    <a href="#" class="social-token">X (Twitter)</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Glass Form Side -->
+          <div class="glass-form-container">
+            <div class="glass-form-card">
+              <h3 class="form-h3">Send an Inquiry</h3>
+              <form class="actual-glass-form" id="contactForm">
+                <div class="form-grid">
+                  <div class="glass-input-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="e.g. Ravi Kumar" required>
+                  </div>
+                  <div class="glass-input-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="you@example.com" required>
+                  </div>
+                </div>
+
+                <div class="glass-input-group">
+                  <label>Inquiry Type</label>
+                  <select required>
+                    <option value="" disabled selected>Select Inquiry Type</option>
+                    <option value="retail">Retail Partnership</option>
+                    <option value="export">Export/Bulk</option>
+                    <option value="beauty">Beauty Brand Collaboration</option>
+                    <option value="sustainability">Sustainability Partner</option>
+                  </select>
+                </div>
+
+                <div class="glass-input-group">
+                  <label>Message</label>
+                  <textarea rows="4" placeholder="Tell us about your requirements..." required></textarea>
+                </div>
+
+                <button type="submit" class="glass-btn">
+                  <span>Send Inquiry</span>
+                  <span class="material-symbols-outlined">send</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home" class="footer-logo-link">
+          <img src="logo.png" alt="VetriVel Farms" class="footer-logo-img" />
+        </a>
+        <p class="footer-tagline">From Earth to Life. The Root of Purity.</p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social-link" id="footerInsta">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+          <a href="#" class="footer-social-link" id="footerTwitter">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.735-8.835L1.254 2.25H8.08l4.259 5.63 5.905-5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <div class="footer-col">
+          <h4 class="footer-col-title">Our Brands</h4>
+          <ul>
+            <li><a href="#coconut">Coconut Pure Oil</a></li>
+            <li><a href="#alevior">Alevior Beauty</a></li>
+            <li><a href="#contact">Bulk / Export Enquiry</a></li>
+            <li><a href="#contact">Retail Partnership</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Resources</h4>
+          <ul>
+            <li><a href="sustainability.html">Sustainability Report</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="certifications.html">Quality Certifications</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigate</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#mission">Our Mission</a></li>
+            <li><a href="#csr">Impact</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 VetriVel Farms. All rights reserved. Crafted with <span class="material-symbols-outlined"
+          style="font-size: 1rem; color: var(--green);">eco</span> from the farm.</p>
+      <div class="footer-credits">
+        <span>Part of</span>
+        <img src="groups_logo.png" alt="Vetrivel Group of Companies" class="footer-groups-logo" />
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><span
+      class="material-symbols-outlined">arrow_upward</span></button>
+
+  <!-- Main JS -->
+  <script src="main.js?v=1.1"></script>
+
+</body>
+
+</html>
