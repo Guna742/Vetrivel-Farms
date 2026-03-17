@@ -479,8 +479,8 @@ body:hover .cursor-dot {
   top: 20px;
   left: 50%;
   right: auto;
-  width: 85%;
-  max-width: 1200px;
+  width: 95%;
+  max-width: 1400px;
   transform: translateX(-50%);
   z-index: 1000;
   padding: 0;
